@@ -6,9 +6,10 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - ruby
   - python
   - javascript
+  - php
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://ackoo.app/developers'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -19,80 +20,80 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Ackoo API! You can use our API to access the Ackoo platform and integrate with it.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+We have language bindings in Shell, Ruby, Python, JavaScript, and PHP! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 # Authentication
 
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'ackoo'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = ackoo::APIClient.authorize!('XXXXXX')
 ```
 
 ```python
-import kittn
+import ackoo
 
-api = kittn.authorize('meowmeowmeow')
+api = ackoo.authorize('XXXXXX')
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: XXXXXX"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const ackoo = require('ackoo');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = ackoo.authorize('XXXXXX');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `XXXXXX` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Ackoo uses API keys to allow access to the API. You can register a new Ackoo API key at our [developer portal](http://www.ackoo.app/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Ackoo expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: XXXXXX`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>XXXXXX</code> with your personal API key.
 </aside>
 
-# Kittens
+# Libraries
 
-## Get All Kittens
+You can install our libraries from your package/library managers.
+
+# Transactions
 
 ```ruby
-require 'kittn'
+require 'ackoo'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api = ackoo::APIClient.authorize!('XXXXXX')
+api.ackoo.get
 ```
 
 ```python
-import kittn
+import ackoo
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api = ackoo.authorize('XXXXXX')
+api.ackoo.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl "http://ackoo.app/api/"
+  -H "Authorization: XXXXXX"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const ackoo = require('ackoo');
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+let api = ackoo.authorize('XXXXXX');
+let ackoo = api.ackoo.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -100,120 +101,294 @@ let kittens = api.kittens.get();
 ```json
 [
   {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+     "id":1,
+     "created at":"timestamp",
+     "finalized at":"timestamp",
+     "total value":700,
+     "status":"open",
+     "user id":"XXXXXXXX",
+     "merchant id":"sdfdsssdd",
+     "campaign id":"sfddfsd",
+     "publisher id":"6sdf00sdfs",
+     "publisher ref id":"7sdggfsdf",
+     "new user":true,
+     "session id":"234gggdsd32434",
+     "ackoo token":"calisfdsdfsco",
+     "currency":"usd",
+     "products":[
+        {
+           "serial":1,
+           "id":"xx",
+           "name":"adsf",
+           "sku":"dfdd",
+           "ean-upc":"3233222",
+           "categories":[
+              "xxx",
+              "xxx",
+              "xxx"
+           ],
+           "description":"sdfsdfdsfdfs",
+           "price":222,
+           "qty":3,
+           "attributes":{
+              "size":"m",
+              "color":"blue"
+           },
+           "segments":[
+              "a",
+              "b",
+              "c"
+           ]
+        },
+     ],
+     "merchant order id":"XXXXXXXX",
+     "merchant creation date":"timestamp",
+     "payment creation date":"calico",
+     "channel":"ios app",
+     "event type":"purchase",
+     "modified at":"XXXXXXXX",
+     "link id":"223sfsddd"
   },
   {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+     "id":2,
+     "created at":"timestamp",
+     "finalized at":"timestamp",
+     "total value":600,
+     "status":"open",
+     "user id":"XXXXXXXX",
+     "merchant id":"sdfdsssdd",
+     "campaign id":"sfddfsd",
+     "publisher id":"6sdfsdfs",
+     "publisher ref id":"7sdfsdf",
+     "new user":"XXXXXXXX",
+     "session id":"23432434",
+     "ackoo token":"calico",
+     "currency":"usd",
+     "products":[
+        {
+           "serial":1,
+           "id":"xx",
+           "name":"adsf",
+           "sku":"dfdd",
+           "ean-upc":"3233222",
+           "categories":[
+              "xxx",
+              "xxx",
+              "xxx"
+           ],
+           "description":"sdfsdfdsfdfs",
+           "price":222,
+           "qty":3,
+           "attributes":{
+              "size":"m",
+              "color":"blue"
+           },
+           "segments":[
+              "a",
+              "b",
+              "c"
+           ]
+        },
+        {
+           "serial":2,
+           "id":"xx",
+           "name":"adsf",
+           "sku":"dfdd",
+           "ean-upc":"3233222",
+           "categories":[
+              "xxx",
+              "xxx",
+              "xxx"
+           ],
+           "description":"sdfsdfdsfdfs",
+           "price":222,
+           "qty":2,
+           "attributes":{
+              "size":"m",
+              "color":"blue"
+           },
+           "segments":[
+              "a",
+              "b",
+              "c"
+           ]
+        }
+     ],
+     "merchant order id":"XXXXXXXX",
+     "merchant creation date":"timestamp",
+     "payment creation date":"calico",
+     "channel":"ios app",
+     "event type":"purchase",
+     "modified at":"XXXXXXXX",
+     "link id":"223sfsddd"
   }
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all transactions.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://example.com/api/ackoo`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+advanced details | false | If set to true, the result will include advanced details.
+new_user | true | If set to false, the result will include all transactions.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a safe transaction is an authenticated one!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific transaction
 
 ```ruby
-require 'kittn'
+require 'ackoo'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+api = ackoo::APIClient.authorize!('XXXXXX')
+api.ackoo.get(2)
 ```
 
 ```python
-import kittn
+import ackoo
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+api = ackoo.authorize('XXXXXX')
+api.ackoo.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl "http://example.com/api/ackoo/2"
+  -H "Authorization: XXXXXX"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const ackoo = require('ackoo');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+let api = ackoo.authorize('XXXXXX');
+let max = api.ackoo.get(2);
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+   "id":2,
+   "created at":"timestamp",
+   "finalized at":"timestamp",
+   "total value":600,
+   "status":"open",
+   "user id":"XXXXXXXX",
+   "merchant id":"sdfdsssdd",
+   "campaign id":"sfddfsd",
+   "publisher id":"6sdfsdfs",
+   "publisher ref id":"7sdfsdf",
+   "new user":"XXXXXXXX",
+   "session id":"23432434",
+   "ackoo token":"calico",
+   "currency":"usd",
+   "products":[
+      {
+         "serial":1,
+         "id":"xx",
+         "name":"adsf",
+         "sku":"dfdd",
+         "ean-upc":"3233222",
+         "categories":[
+            "xxx",
+            "xxx",
+            "xxx"
+         ],
+         "description":"sdfsdfdsfdfs",
+         "price":222,
+         "qty":3,
+         "attributes":{
+            "size":"m",
+            "color":"blue"
+         },
+         "segments":[
+            "a",
+            "b",
+            "c"
+         ]
+      },
+      {
+         "serial":2,
+         "id":"xx",
+         "name":"adsf",
+         "sku":"dfdd",
+         "ean-upc":"3233222",
+         "categories":[
+            "xxx",
+            "xxx",
+            "xxx"
+         ],
+         "description":"sdfsdfdsfdfs",
+         "price":222,
+         "qty":2,
+         "attributes":{
+            "size":"m",
+            "color":"blue"
+         },
+         "segments":[
+            "a",
+            "b",
+            "c"
+         ]
+      }
+   ],
+   "merchant order id":"XXXXXXXX",
+   "merchant creation date":"timestamp",
+   "payment creation date":"calico",
+   "channel":"ios app",
+   "event type":"purchase",
+   "modified at":"XXXXXXXX",
+   "link id":"223sfsddd"
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific transaction.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/ackoo/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the transaction to retrieve
 
-## Delete a Specific Kitten
+## Delete a Specific transaction
 
 ```ruby
-require 'kittn'
+require 'ackoo'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
+api = ackoo::APIClient.authorize!('XXXXXX')
+api.ackoo.delete(2)
 ```
 
 ```python
-import kittn
+import ackoo
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
+api = ackoo.authorize('XXXXXX')
+api.ackoo.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://example.com/api/ackoo/2"
   -X DELETE
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: XXXXXX"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const ackoo = require('ackoo');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+let api = ackoo.authorize('XXXXXX');
+let max = api.ackoo.delete(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -225,15 +400,14 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint deletes a specific transaction.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE http://example.com/ackoo/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete
-
+ID | The ID of the transaction to delete
